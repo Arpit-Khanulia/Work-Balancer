@@ -1,0 +1,29 @@
+PROBLEM:
+
+A company has several employees at different grades(senior, junior, trainee, etc.), it is a hectic task to assign work to all of them as per their roles, grades and work capacity without biasing.
+
+Various things are given to us:
+->Grade of the employee
+->Sources(Employee id)
+->Maximum Workload of each employee based on the grade
+->Remaining workload
+->Task load
+->Task credits
+->Task deadline
+->N(No. of grades in a company)(vary company to company)
+->A predefined list of job roles with their task load and credits(vary company to company)
+
+Conditions:
+->The work should be done by minimum two employees irrespective of grade.
+->The credits of the work should be distributed among the sources according to their grades.(Higher grade will have higher credit share than the below grade sources).
+->Each grade will be having the same maximum work load capacity irrespective of their roles.
+->The workload of the source should be retarded instantly when work is assigned to it.
+->The sources having mismatched roles to task role/category(selected from the list) will be eliminated with the work assigning process of that particular work).
+->The work should be distributed on the priority basis, the source holding less work in accordance with it's capacity will be served first.
+->Every task will be having a deadline, and each day after deadline cost sources 1 credit each involved in the task.
+
+Expected Cases:
+->If the task load is greater than all the remaining workload of the sources than the work can be extended to the overtime sources and each involved source will get 10% extra credits of the total credits assign to that work irrespective of their grade. The overtime work assigning process will be same as normal.
+->If any of the employees having same remaining workload capacity then priority of serving work will be greater for lower grade.(In case of same grade, random source can be selected)
+
+We have to program an efficient system that enables the company to distribute work to it's employee without biasing and following all the above conditions.
