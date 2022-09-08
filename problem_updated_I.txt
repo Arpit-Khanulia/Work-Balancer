@@ -1,0 +1,58 @@
+PROBLEM:
+
+A company has several employees at different grades(senior, junior, trainee, etc.), it is a hectic task to assign work to all of them as per their roles, grades and work capacity without biasing.
+
+Various things are given to us:
+->Grade of the employee
+->Sources(Employee id)
+->Maximum Workload of each employee based on the grade
+->Remaining workload
+->Task load
+->Task credits
+->Task deadline
+->N(No. of grades in a company)(vary company to company)
+-Grades categorization in upper, mid and lower grade.
+->A predefined list of tasks with it's load, tag  and credits(vary company to company)
+
+Conditions:
+->The credits of the work should be distributed among the sources according to their grades.(Higher grade will have higher credit share than the below grade sources).
+->Each grade will be having the same maximum work load capacity irrespective of their roles.
+->The workload of the source should be retarded instantly when work is assigned to it.
+->The grades will be categorized into upper, mid and lower. This categorization will be predefined.
+->The task is divided into three tags-Basic, Intermediate and Advanced. Each task will be assigned with a tag out of these three.
+->Basic tag task can only be done by lower grade sources, intermediate by mid grade and advanced by upper grades.
+->A minimum criteria will be defined for each task tag i.e. minimum no. of sources will be set for each tag.
+->The sources having mismatched roles to task role/category(selected from the list) will be eliminated with the work assigning process of that particular work).
+->The work should be distributed on the priority basis, the source holding less work in accordance with it's capacity will be served first.
+->Every task will be having a deadline, and each day after deadline cost sources 1 credit each involved in the task.
+
+Expected Cases:
+->If the task load is greater than all the remaining workload of the sources than the work can be extended to the overtime sources and each involved source will get 10% extra credits of the total credits assign to that work irrespective of their grade. The overtime work assigning process will be same as normal.
+->If any of the employees having same remaining workload capacity then priority of serving work will be greater for lower grade.(In case of same grade, random source can be selected)
+
+We have to program an efficient system that enables the company to distribute work to it's employee without biasing and following all the above conditions.
+
+
+Random case:
+
+Task credits: 80
+Task load:100
+Task tag: Basic
+Task deadline:15 days on after task is assigned
+Total grades of company:9
+Grade category distribution:
+Lower:1-3
+Mid:4-6
+Upper: above 6
+
+Assuming all have preferred job role for the specified task.
+
+Grade			7		4		1		5
+Grade level		Upper 		Mid		Lower		Mid
+Sources			A		B		C		D
+Max. workload		60		100		150		90
+Workload remaining	20		50		80		50
+Free workload		0.33		0.50		0.54		0.55
+Priority		Eliminated	II		Eliminated	I
+
+Here Source D and B should get the work.
