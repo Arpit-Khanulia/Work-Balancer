@@ -1,0 +1,20 @@
+GRADE LOGIC:
+
+The employees are distributed in different grades, let total grades be N.
+Now the credits of the task  should be divided among the sources on the basis of their grades.
+
+Let the work 'alpha' has 100 credits and N(variable) be 9(1 to 9), now if sources having grade 5,4,2 are working on alpha then credits per source can be calculated as:
+
+Source(x grade)=(x/t)*total credits
+
+Where 	  x----> grade of the employee
+	  t----->sum of the grade involved in work(in this case:5+4+2=11)
+	
+
+MINIMUM SOURCES LOGIC:
+
+As mention in the conditions each level has minimum sources criteria for work distribution.
+Let the minimum sources for a level(upper/mid/lower) be n.
+Then the work should be distributed among n people and on priority basis.
+Even if the task load is <= of remaining work load of the source, the work should be divided in n sources(fulfilling the minimum condition).
+So each source workload will be retarded by (task load/n) on priority basis.
